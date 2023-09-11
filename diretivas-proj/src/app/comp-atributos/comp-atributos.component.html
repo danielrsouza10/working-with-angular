@@ -1,0 +1,12 @@
+<p [ngClass]="estilo">comp-atributos works!</p>
+<button (click)="switchStyle()">{{ botaoEstilo }}</button>
+<h1 [ngStyle]="{ background: corFundo }">Curso Angular</h1>
+
+<h1>Lista de Compras</h1>
+<p>Adicione um item</p>
+<input type="text" [(ngModel)]="item" />
+<button (click)="adicionarProduto(item)">adicionar produto</button>
+<p>{{ item }}</p>
+<ul>
+  <li *ngFor="let produto of produtos">{{ produto }}</li>
+</ul>

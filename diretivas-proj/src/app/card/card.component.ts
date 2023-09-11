@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CardComponent {
   produtos: string[] = [];
+  menuType: string = '';
 
   constructor() {
     this.produtos = ['mouse', 'teclado', 'cabo', 'fonte'];

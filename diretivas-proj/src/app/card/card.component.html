@@ -6,4 +6,20 @@
   </li>
   <button (click)="adicionar()">Remover</button>
 </ul>
-<button>Ola mundo</button>
+<div [ngSwitch]="menuType">
+  <div *ngSwitchDefault>
+    <li>editar perfil</li>
+    <li>adicionar cartao</li>
+  </div>
+  <div *ngSwitchCase="'admin'">
+    <li>editar perfil</li>
+    <li>adicionar cartao</li>
+    <li>gerenciar usuarios</li>
+  </div>
+  <div *ngSwitchCase="'superUser'">
+    <li>editar perfil</li>
+    <li>adicionar cartao</li>
+    <li>gerenciar usuarios</li>
+    <li>gerenciar admins</li>
+  </div>
+</div>
