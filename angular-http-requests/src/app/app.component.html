@@ -1,0 +1,18 @@
+<form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)">
+  <label for="title">Title</label>
+  <input ngModel name="title" type="text" placeholder="Add a title" required />
+  <label for="content">Content</label>
+  <textarea
+    ngModel
+    name="content"
+    type="text"
+    placeholder="With some content"
+    required
+  >
+  </textarea>
+  <button>Send Post</button>
+</form>
+
+<button (click)="onFetchPosts()">Fetch</button>
+
+<router-outlet></router-outlet>
